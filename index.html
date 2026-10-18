@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qianzhi Ye | Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, and feature selection.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23354f67'/%3E%3Cpath d='M10 25 32 15l22 10-22 10zM18 33v11c7 6 21 6 28 0V33' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: light; font-family: "Trebuchet MS", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, sans-serif; font-size: 16px; scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #494e52; background: #fff; line-height: 1.5; }
+    a { color: #354f67; text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: #1d3449; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #2674a0; outline-offset: 3px; border-radius: 2px; }
+    .masthead { border-bottom: 1px solid #f0f1f2; background: #fff; }
+    .masthead-inner { max-width: 1280px; padding: 0 8px; margin: auto; min-height: 52px; display: flex; align-items: center; }
+    .desktop-nav { display: flex; align-items: center; gap: 31px; white-space: nowrap; }
+    .desktop-nav a { color: #7a8288; font-size: .94rem; padding: 13px 0; text-decoration: none; }
+    .desktop-nav a:first-child { font-weight: 700; }
+    .desktop-nav a:hover, .desktop-nav a:focus-visible { color: #494e52; }
+    .mobile-nav { display: none; }
+    .language-switch { margin-left: auto; display: inline-flex; flex: none; padding: 2px; border: 1px solid #dfe3e6; border-radius: 7px; background: #f7f8f8; }
+    .language-switch button { min-width: 42px; min-height: 30px; padding: 4px 9px; border: 0; border-radius: 5px; background: transparent; color: #70777c; font: inherit; font-size: .82rem; font-weight: 700; cursor: pointer; }
+    .language-switch button:hover { color: #354f67; }
+    .language-switch button[aria-pressed="true"] { color: #fff; background: #354f67; box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
+    .site-layout { max-width: 1280px; margin: 0 auto; padding: 16px 8px 50px; display: grid; grid-template-columns: 191px minmax(0, 1fr); gap: 38px; align-items: start; }
+    .sidebar { position: sticky; top: 20px; padding-top: 20px; }
+    .portrait { width: 175px; height: 175px; aspect-ratio: 1; overflow: hidden; border: 4px solid #fff; box-shadow: 0 0 0 1px #f2f3f3; border-radius: 50%; background: linear-gradient(150deg, #d5f8fc 0%, #c7e8f4 53%, #8dbbd1 100%); display: grid; place-items: center; color: #354f67; font-size: 3.2rem; letter-spacing: -.12em; font-weight: 700; user-select: none; }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; transform: scale(1.16); transform-origin: 50% 38%; display: block; }
+    .portrait span { padding-right: .12em; }
+    .sidebar h1 { font-size: 1.35rem; line-height: 1.25; margin: 16px 0 18px; }
+    .native-name { display: block; margin-top: 4px; color: #70777c; font-size: .92rem; font-weight: 400; }
+    .role { margin: 0 0 9px; line-height: 1.55; }
+    .profile-links { list-style: none; padding: 0; margin: 0; }
+    .profile-links li { margin: 0; padding: 0; }
+    .profile-links > li > a, .profile-links > li > span { color: #494e52; text-decoration: none; display: flex; gap: 8px; align-items: center; padding: 6px 0; min-height: 34px; }
+    .profile-links a:hover { color: #1d3449; text-decoration: underline; }
+    .profile-links .icon { width: 15px; display: inline-flex; justify-content: center; font-size: .9rem; flex: none; color: #494e52; }
+    .content { min-width: 0; padding-top: 6px; }
+    .intro { margin: 0 0 19px; }
+    section { scroll-margin-top: 18px; }
+    section > h2 { font-size: 1.32rem; line-height: 1.2; padding: 0 0 11px; margin: 20px 0 10px; border-bottom: 1px solid #f0f1f2; }
+    section:first-of-type > h2 { margin-top: 16px; }
+    h3 { font-size: 1.18rem; line-height: 1.3; margin: 12px 0 7px; }
+    ul.body-list { margin: 0 0 15px; padding-left: 39px; }
+    .body-list li { margin: 0 0 5px; padding-left: 0; }
+    .body-list em { font-style: italic; }
+    .paper-list li { margin-bottom: 8px; }
+    .paper-list strong { font-weight: 700; }
+    .paper-list sup { font-size: .72em; line-height: 0; vertical-align: super; }
+    .paper-title { font-weight: 600; }
+    .paper-links { white-space: nowrap; }
+    .publication-note { margin: -4px 0 10px; }
+    .muted { color: #70777c; }
+    @media (max-width: 900px) {
+      .masthead-inner, .site-layout { padding-left: 24px; padding-right: 24px; }
+      .desktop-nav { gap: 18px; }
+      .desktop-nav a { font-size: .88rem; }
+      .site-layout { grid-template-columns: 175px minmax(0, 1fr); gap: 26px; }
+    }
+    @media (max-width: 760px) {
+      .masthead-inner { position: relative; display: block; padding: 0 20px; }
+      .desktop-nav { display: none; }
+      .mobile-nav { display: block; min-width: 0; }
+      .mobile-nav summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 56px; padding-right: 100px; font-size: .9rem; font-weight: 700; color: #7a8288; }
+      .mobile-nav summary::-webkit-details-marker { display: none; }
+      .menu-icon { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+      .menu-icon svg { display: block; width: 18px; height: 18px; }
+      .mobile-nav nav { display: none; }
+      .mobile-nav[open] nav { display: flex; flex-direction: column; gap: 6px; margin: 0 0 14px; padding: 10px; border: 1px solid #e1e6ea; border-radius: 8px; background: #f3f5f7; }
+      .mobile-nav nav a { display: flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 1px solid #e3e8ec; border-radius: 5px; background: #fff; color: #494e52; font-size: .9rem; text-decoration: none; }
+      .mobile-nav nav a:nth-child(even) { background: #f8fafb; }
+      .mobile-nav nav a:hover, .mobile-nav nav a:focus-visible { color: #354f67; background: #e8eef3; border-color: #c8d5e0; }
+      .language-switch { position: absolute; top: 12px; right: 20px; margin-left: 0; padding: 2px; border-radius: 6px; }
+      .language-switch button { min-width: 34px; min-height: 26px; padding: 3px 6px; font-size: .75rem; border-radius: 4px; }
+      .site-layout { display: block; padding: 20px 22px 44px; }
+      .sidebar { position: static; padding: 0 0 22px; border-bottom: 1px solid #f0f1f2; margin-bottom: 20px; display: grid; grid-template-columns: 112px minmax(0, 1fr); column-gap: 20px; align-items: start; }
+      .portrait { width: 112px; height: 112px; font-size: 2.3rem; grid-row: span 3; }
+      .sidebar h1 { margin: 0 0 7px; }
+      .role { margin-bottom: 5px; }
+      .profile-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; column-gap: 18px; margin-top: 12px; }
+      .profile-links > li > a, .profile-links > li > span { padding: 4px 0; }
+      .content { padding: 0; }
+      .intro { margin-top: 0; }
+      ul.body-list { padding-left: 24px; }
+    }
+    @media (max-width: 420px) {
+      .site-layout { padding-left: 18px; padding-right: 18px; }
+      .sidebar { grid-template-columns: 96px minmax(0, 1fr); column-gap: 15px; }
+      .portrait { width: 96px; height: 96px; font-size: 2rem; }
+      .sidebar h1 { font-size: 1.23rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria-label="main_navigation">
+        <a href="#about-me" data-i18n="nav_home">Homepage</a><a href="#about-me" data-i18n="nav_about">About Me</a><a href="#news" data-i18n="nav_news">News</a><a href="#publications" data-i18n="nav_publications">Publications</a><a href="#honors" data-i18n="nav_honors">Honors</a><a href="#education" data-i18n="nav_education">Education</a>
+      </nav>
+      <details class="mobile-nav">
+        <summary><span data-i18n="nav_home">Homepage</span> <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span></summary>
+        <nav aria-label="Mobile navigation" data-i18n-aria-label="mobile_navigation">
+          <a href="#about-me" data-i18n="nav_about">About Me</a><a href="#news" data-i18n="nav_news">News</a><a href="#publications" data-i18n="nav_publications">Publications</a><a href="#honors" data-i18n="nav_honors">Honors</a><a href="#education" data-i18n="nav_education">Education</a>
+        </nav>
+      </details>
+      <div class="language-switch" role="group" aria-label="Language selector" data-i18n-aria-label="language_selector">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <button type="button" data-language="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-layout" id="about-me">
+    <aside class="sidebar" aria-label="Profile" data-i18n-aria-label="profile">
+      <div class="portrait"><img src="portrait.jpg" alt="Portrait of Qianzhi Ye" data-i18n-alt="portrait_alt"></div>
+      <h1>Qianzhi Ye <span class="native-name" lang="zh-CN">叶倩芝</span></h1>
+      <p class="role"><span data-i18n="role">Ph.D. Student</span><br><span data-i18n="university">Jinan University</span></p>
+      <ul class="profile-links">
+        <li><span><span class="icon" aria-hidden="true">●</span><span data-i18n="location">Guangzhou, China</span></span></li>
+        <li><a href="https://scholar.google.com/citations?user=qp-T0iUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">▰</span><span data-i18n="google_scholar">Google Scholar</span></a></li>
+      </ul>
+    </aside>
+
+    <article class="content">
+      <p class="intro" data-i18n="intro">I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research focuses on multi-label learning, partial-label learning, semi-supervised learning, label enhancement, and feature selection.</p>
+
+      <section id="news" aria-labelledby="news-heading">
+        <h2 id="news-heading" data-i18n="news_heading">News</h2>
+        <ul class="body-list">
+          <li><em>2026.08</em>: <span data-i18n="news_our_paper">Our paper</span> “Multi-Label Semantic Decoding via Hierarchical Encoding and Sparse Representation Fusion” <span data-i18n="news_published_in">was published in</span> <strong>Pattern Recognition</strong><span data-i18n="period">.</span></li>
+          <li><em>2026.08.22</em>: <span data-i18n="news_our_paper">Our paper</span> “Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection” <span data-i18n="news_published_in">was published in</span> <strong>IEEE Transactions on Fuzzy Systems</strong><span data-i18n="period">.</span></li>
+          <li><em>2025.09</em>: <span data-i18n="news_our_paper">Our paper</span> “SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement” <span data-i18n="news_published_in">was published in</span> <strong>IEEE TKDE</strong><span data-i18n="period">.</span></li>
+          <li><em>2024.11</em>: <span data-i18n="news_our_paper">Our paper</span> “Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity” <span data-i18n="news_published_in">was published in</span> <strong>IEEE TKDE</strong><span data-i18n="period">.</span></li>
+        </ul>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading" data-i18n="publications_heading">Selected Publications</h2>
+        <ul class="body-list paper-list">
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.patcog.2026.114789" target="_blank" rel="noopener noreferrer">Multi-Label Semantic Decoding via Hierarchical Encoding and Sparse Representation Fusion</a>. Yihui Li, <strong>Qianzhi Ye</strong>, Guodong Du, Yong Tang, and Jia Zhang. <strong>Pattern Recognition</strong>, Article 114789, 2026. <span class="paper-links">[<a href="https://github.com/cseroun06/HERF" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TFUZZ.2026.3722843" target="_blank" rel="noopener noreferrer">Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection</a>. <strong>Qianzhi Ye</strong>, Hao Huang, Jia Zhang, Hanrui Wu, Ruiting Li, Guoxu Zhou, and Jinyi Long. <strong>IEEE Transactions on Fuzzy Systems</strong>, <span data-i18n="dual_publication_date">published online Aug. 22, 2026</span><span data-i18n="period">.</span> <span class="paper-links">[<a href="https://github.com/JNU-IHCILab/DuetFS" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2025.3579536" target="_blank" rel="noopener noreferrer">SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement</a>. <strong>Qianzhi Ye</strong>, Jia Zhang, Hanrui Wu, Tianlong Gu, C. L. Philip Chen, and Jinyi Long. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 37(9):5613–5626, 2025. <span class="paper-links">[<a href="https://github.com/JNU-IHCILab/SMLE" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2024.3405489" target="_blank" rel="noopener noreferrer">Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity</a>. Wenbin Qian, Yihui Li, <strong>Qianzhi Ye<sup>*</sup></strong>, Shuyin Xia, Jintao Huang, and Weiping Ding. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 36(11):5797–5810, 2024. <span class="paper-links">[<a href="https://github.com/jxau-kdd/CPDS" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.inffus.2023.01.019" target="_blank" rel="noopener noreferrer">Disambiguation-Based Partial Label Feature Selection via Feature Dependency and Label Consistency</a>. Wenbin Qian, Yihui Li, <strong>Qianzhi Ye</strong>, Weiping Ding, and Wenhao Shu. <strong>Information Fusion</strong>, 94:152–168, 2023. <span class="paper-links">[<a href="https://github.com/jxau-kdd/PFFL" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.knosys.2022.109778" target="_blank" rel="noopener noreferrer">Label Distribution Feature Selection with Feature Weights Fusion and Local Label Correlations</a>. Wenbin Qian, <strong>Qianzhi Ye</strong>, Yihui Li, and Shiming Dai. <strong>Knowledge-Based Systems</strong>, 247:109778, 2022.</li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.ins.2022.05.094" target="_blank" rel="noopener noreferrer">Relevance-Based Label Distribution Feature Selection via Convex Optimization</a>. Wenbin Qian, <strong>Qianzhi Ye</strong>, Yihui Li, Jintao Huang, and Shiming Dai. <strong>Information Sciences</strong>, 607:322–345, 2022.</li>
+        </ul>
+        <p class="muted publication-note"><sup>*</sup> <span data-i18n="corresponding_author">Corresponding author</span><span data-i18n="period">.</span></p>
+        <p class="muted"><span data-i18n="complete_publications">For the complete and most up-to-date publication list, please visit my</span> <a href="https://scholar.google.com/citations?user=qp-T0iUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer" data-i18n="scholar_profile">Google Scholar profile</a><span data-i18n="period">.</span></p>
+      </section>
+
+      <section id="honors" aria-labelledby="honors-heading">
+        <h2 id="honors-heading" data-i18n="honors_heading">Honors</h2>
+        <ul class="body-list">
+          <li><em>2023</em>: <span data-i18n="national_scholarship">National Scholarship</span><span data-i18n="period">.</span></li>
+        </ul>
+      </section>
+
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading" data-i18n="education_heading">Education</h2>
+        <ul class="body-list">
+          <li data-i18n="education_phd">Ph.D. student, College of Information Science and Technology, Jinan University, Guangzhou, China.</li>
+          <li data-i18n="education_ms">M.S., School of Computer and Information Engineering, Jiangxi Agricultural University, Nanchang, China, 2023.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <script>
+    const translations = {
+      en: {
+        page_title: 'Qianzhi Ye | Academic Homepage',
+        meta_description: 'Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, and feature selection.',
+        main_navigation: 'Main navigation',
+        mobile_navigation: 'Mobile navigation',
+        language_selector: 'Language selector',
+        profile: 'Profile',
+        portrait_alt: 'Portrait of Qianzhi Ye',
+        nav_home: 'Homepage',
+        nav_about: 'About Me',
+        nav_news: 'News',
+        nav_publications: 'Publications',
+        nav_honors: 'Honors',
+        nav_education: 'Education',
+        role: 'Ph.D. Student',
+        university: 'Jinan University',
+        location: 'Guangzhou, China',
+        google_scholar: 'Google Scholar',
+        intro: 'I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research focuses on multi-label learning, partial-label learning, semi-supervised learning, label enhancement, and feature selection.',
+        news_heading: 'News',
+        news_our_paper: 'Our paper',
+        news_published_in: 'was published in',
+        period: '.',
+        publications_heading: 'Selected Publications',
+        code: 'Code',
+        dual_publication_date: 'published online Aug. 22, 2026',
+        corresponding_author: 'Corresponding author',
+        complete_publications: 'For the complete and most up-to-date publication list, please visit my',
+        scholar_profile: 'Google Scholar profile',
+        honors_heading: 'Honors',
+        national_scholarship: 'National Scholarship',
+        education_heading: 'Education',
+        education_phd: 'Ph.D. student, College of Information Science and Technology, Jinan University, Guangzhou, China.',
+        education_ms: 'M.S., School of Computer and Information Engineering, Jiangxi Agricultural University, Nanchang, China, 2023.'
+      },
+      zh: {
+        page_title: '叶倩芝 | 个人学术主页',
+        meta_description: '叶倩芝的个人学术主页，现为暨南大学博士研究生，研究方向包括多标签学习、弱监督学习与特征选择。',
+        main_navigation: '主导航',
+        mobile_navigation: '移动端导航',
+        language_selector: '语言选择',
+        profile: '个人信息',
+        portrait_alt: '叶倩芝头像',
+        nav_home: '主页',
+        nav_about: '关于我',
+        nav_news: '最新动态',
+        nav_publications: '论文发表',
+        nav_honors: '荣誉',
+        nav_education: '教育经历',
+        role: '博士研究生',
+        university: '暨南大学',
+        location: '中国广州',
+        google_scholar: '谷歌学术',
+        intro: '我现为暨南大学信息科学技术学院博士研究生，位于中国广州。我于2023年毕业于江西农业大学计算机与信息工程学院，获硕士学位。我的研究方向包括多标签学习、偏标记学习、半监督学习、标签增强和特征选择。',
+        news_heading: '最新动态',
+        news_our_paper: '我们的论文',
+        news_published_in: '发表于',
+        period: '。',
+        publications_heading: '代表性论文',
+        code: '代码',
+        dual_publication_date: '2026年8月22日在线发表',
+        corresponding_author: '通讯作者',
+        complete_publications: '完整且最新的论文列表请参见我的',
+        scholar_profile: '谷歌学术主页',
+        honors_heading: '荣誉',
+        national_scholarship: '国家奖学金',
+        education_heading: '教育经历',
+        education_phd: '博士研究生，暨南大学信息科学技术学院，中国广州。',
+        education_ms: '硕士，江西农业大学计算机与信息工程学院，中国南昌，2023年。'
+      }
+    };
+
+    const languageStorageKey = 'qianzhi-ye-homepage-language';
+
+    function applyLanguage(language) {
+      const selected = translations[language] ? language : 'en';
+      const copy = translations[selected];
+      document.documentElement.lang = selected === 'zh' ? 'zh-CN' : 'en';
+      document.documentElement.dataset.language = selected;
+      document.title = copy.page_title;
+      document.querySelector('meta[name="description"]').setAttribute('content', copy.meta_description);
+
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.dataset.i18n;
+        if (Object.prototype.hasOwnProperty.call(copy, key)) element.textContent = copy[key];
+      });
+      document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+        const key = element.dataset.i18nAriaLabel;
+        if (Object.prototype.hasOwnProperty.call(copy, key)) element.setAttribute('aria-label', copy[key]);
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+        const key = element.dataset.i18nAlt;
+        if (Object.prototype.hasOwnProperty.call(copy, key)) element.setAttribute('alt', copy[key]);
+      });
+      document.querySelectorAll('[data-language]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === selected));
+      });
+
+      try { localStorage.setItem(languageStorageKey, selected); } catch (error) {}
+    }
+
+    document.querySelectorAll('[data-language]').forEach(button => {
+      button.addEventListener('click', () => applyLanguage(button.dataset.language));
+    });
+    const mobileMenu = document.querySelector('.mobile-nav');
+    const menuSummary = mobileMenu.querySelector('summary');
+    const menuPanel = mobileMenu.querySelector('nav');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let menuAnimation = null;
+    let panelAnimation = null;
+    let menuExpanded = mobileMenu.open;
+
+    function setMenuExpanded(expanded) {
+      menuExpanded = expanded;
+      const startHeight = mobileMenu.getBoundingClientRect().height;
+      const startOpacity = getComputedStyle(menuPanel).opacity;
+      menuAnimation?.cancel();
+      panelAnimation?.cancel();
+      menuSummary.setAttribute('aria-expanded', String(expanded));
+      menuPanel.inert = !expanded;
+
+      if (reducedMotion.matches || !mobileMenu.animate) {
+        mobileMenu.open = expanded;
+        mobileMenu.style.overflow = '';
+        return;
+      }
+
+      // Keep details open during collapse so its content can animate out.
+      mobileMenu.open = true;
+      const endHeight = expanded ? mobileMenu.getBoundingClientRect().height : menuSummary.getBoundingClientRect().height;
+      mobileMenu.style.overflow = 'hidden';
+      const timing = { duration: 240, easing: 'cubic-bezier(.22, 1, .36, 1)' };
+      menuAnimation = mobileMenu.animate([{ height: `${startHeight}px` }, { height: `${endHeight}px` }], timing);
+      panelAnimation = menuPanel.animate(
+        [{ opacity: expanded ? (startHeight <= menuSummary.offsetHeight ? 0 : startOpacity) : startOpacity, transform: expanded ? 'translateY(-6px)' : 'translateY(0)' },
+         { opacity: expanded ? 1 : 0, transform: expanded ? 'translateY(0)' : 'translateY(-6px)' }], timing);
+      menuAnimation.onfinish = () => {
+        mobileMenu.open = expanded;
+        mobileMenu.style.overflow = '';
+        menuAnimation = null;
+        panelAnimation = null;
+      };
+    }
+
+    menuSummary.setAttribute('aria-expanded', String(menuExpanded));
+    menuPanel.inert = !menuExpanded;
+    menuSummary.addEventListener('click', event => {
+      event.preventDefault();
+      setMenuExpanded(!menuExpanded);
+    });
+    document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', () => {
+      menuSummary.focus({ preventScroll: true });
+      setMenuExpanded(false);
+    }));
+    mobileMenu.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menuExpanded) {
+        menuSummary.focus({ preventScroll: true });
+        setMenuExpanded(false);
+      }
+    });
+
+    let savedLanguage = null;
+    try { savedLanguage = localStorage.getItem(languageStorageKey); } catch (error) {}
+    const browserLanguage = (navigator.languages?.[0] || navigator.language || 'en').toLowerCase();
+    applyLanguage(savedLanguage || (browserLanguage.startsWith('zh') ? 'zh' : 'en'));
+  </script>
+</body>
+</html>
