@@ -46,11 +46,21 @@
     ul.body-list { margin: 0 0 15px; padding-left: 39px; }
     .body-list li { margin: 0 0 5px; padding-left: 0; }
     .body-list em { font-style: italic; }
-    .paper-list li { margin-bottom: 8px; }
+    .paper-list li { margin-bottom: 20px; }
     .paper-list strong { font-weight: 700; }
     .paper-list sup { font-size: .72em; line-height: 0; vertical-align: super; }
     .paper-title { font-weight: 600; }
     .paper-links { white-space: nowrap; }
+    .author-legend { margin: 0 0 14px; color: #7a8288; font-size: .82rem; }
+    .author-mark { margin-left: 1px; }
+    .paper-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+    .paper-tag { display: inline-flex; align-items: center; justify-content: center; padding: 3px 9px; min-height: 27px; border: 1px solid #d6e4e2; border-radius: 4px; background: #f0f7f5; color: #275b63; font: inherit; font-size: .75rem; line-height: 1.4; text-decoration: none; white-space: nowrap; }
+    .paper-tag.metric { border-color: #d8e2ef; background: #f1f5fa; color: #354f67; }
+    a.paper-tag:hover, button.paper-tag:hover { border-color: #aebfce; background: #e6eef6; color: #1d3449; text-decoration: none; }
+    .bibtex-toggle { cursor: pointer; }
+    .bibtex-toggle[aria-expanded="true"] { border-color: #aebfce; background: #dfe8f0; }
+    .bibtex-panel { max-width: 100%; margin: 10px 0 0; padding: 14px 16px; border: 1px solid #dfe3e6; border-radius: 5px; background: #f5f7f9; color: #30383e; font: .8rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; tab-size: 2; }
+    .bibtex-panel[hidden] { display: none; }
     .publication-note { margin: -4px 0 10px; }
     .muted { color: #70777c; }
     @media (max-width: 900px) {
@@ -138,16 +148,72 @@
 
       <section id="publications" aria-labelledby="publications-heading">
         <h2 id="publications-heading" data-i18n="publications_heading">Selected Publications</h2>
+        <p class="author-legend" data-i18n="author_legend">† Co-first authors; * Corresponding authors (including co-corresponding authors). IF tags show the metric year.</p>
         <ul class="body-list paper-list">
-          <li><a class="paper-title" href="https://doi.org/10.1016/j.patcog.2026.114789" target="_blank" rel="noopener noreferrer">Multi-Label Semantic Decoding via Hierarchical Encoding and Sparse Representation Fusion</a>. Yihui Li, <strong>Qianzhi Ye</strong>, Guodong Du, Yong Tang, and Jia Zhang<sup>*</sup>. <strong>Pattern Recognition</strong>, Article 114789, 2026. <span class="paper-links">[<a href="https://github.com/cseroun06/HERF" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
-          <li><a class="paper-title" href="https://doi.org/10.1109/TFUZZ.2026.3722843" target="_blank" rel="noopener noreferrer">Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection</a>. <strong>Qianzhi Ye</strong>, Hao Huang, Jia Zhang, Hanrui Wu, Ruiting Li, Guoxu Zhou, and Jinyi Long<sup>*</sup>. <strong>IEEE Transactions on Fuzzy Systems</strong>, <span data-i18n="dual_publication_date">published online Aug. 22, 2026</span><span data-i18n="period">.</span> <span class="paper-links">[<a href="https://github.com/JNU-IHCILab/DuetFS" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
-          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2025.3579536" target="_blank" rel="noopener noreferrer">SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement</a>. <strong>Qianzhi Ye</strong>, Jia Zhang, Hanrui Wu, Tianlong Gu, C. L. Philip Chen, and Jinyi Long<sup>*</sup>. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 37(9):5613–5626, 2025. <span class="paper-links">[<a href="https://github.com/JNU-IHCILab/SMLE" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
-          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2024.3405489" target="_blank" rel="noopener noreferrer">Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity</a>. Wenbin Qian<sup>*</sup>, Yihui Li, <strong>Qianzhi Ye<sup>*</sup></strong>, Shuyin Xia, Jintao Huang, and Weiping Ding. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 36(11):5797–5810, 2024. <span class="paper-links">[<a href="https://github.com/jxau-kdd/CPDS" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
-          <li><a class="paper-title" href="https://doi.org/10.1016/j.inffus.2023.01.019" target="_blank" rel="noopener noreferrer">Disambiguation-Based Partial Label Feature Selection via Feature Dependency and Label Consistency</a>. Wenbin Qian<sup>*</sup>, Yihui Li, <strong>Qianzhi Ye</strong>, Weiping Ding, and Wenhao Shu. <strong>Information Fusion</strong>, 94:152–168, 2023. <span class="paper-links">[<a href="https://github.com/jxau-kdd/PFFL" target="_blank" rel="noopener noreferrer" data-i18n="code">Code</a>]</span></li>
-          <li><a class="paper-title" href="https://doi.org/10.1016/j.knosys.2022.109778" target="_blank" rel="noopener noreferrer">Label Distribution Feature Selection with Feature Weights Fusion and Local Label Correlations</a>. Wenbin Qian<sup>*</sup>, <strong>Qianzhi Ye</strong>, Yihui Li, and Shiming Dai. <strong>Knowledge-Based Systems</strong>, 247:109778, 2022.</li>
-          <li><a class="paper-title" href="https://doi.org/10.1016/j.ins.2022.05.094" target="_blank" rel="noopener noreferrer">Relevance-Based Label Distribution Feature Selection via Convex Optimization</a>. Wenbin Qian<sup>*</sup>, <strong>Qianzhi Ye</strong>, Yihui Li, Jintao Huang, and Shiming Dai. <strong>Information Sciences</strong>, 607:322–345, 2022.</li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.patcog.2026.114789" rel="noopener noreferrer" target="_blank">Multi-Label Semantic Decoding via Hierarchical Encoding and Sparse Representation Fusion</a>. Yihui Li, <strong>Qianzhi Ye</strong>, Guodong Du, Yong Tang, and Jia Zhang<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>. <strong>Pattern Recognition</strong>, Article 114789, 2026. <div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2025">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.sciencedirect.com/journal/pattern-recognition" rel="noopener noreferrer" target="_blank">IF 9.1 · 2025</a><a class="paper-tag metric" data-i18n="code" href="https://github.com/cseroun06/HERF" rel="noopener noreferrer" target="_blank">Code</a><button aria-controls="bibtex-herf" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2025): https://liyihui6.github.io/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-herf"><code>@article{li2027herf,
+  title = {Multi-label semantic decoding via {Hierarchical Encoding} and sparse {Representation Fusion}},
+  author = {Li, Yihui and Ye, Qianzhi and Du, Guodong and Tang, Yong and Zhang, Jia},
+  journal = {Pattern Recognition},
+  year = {2027},
+  volume = {182},
+  pages = {114789},
+  doi = {10.1016/j.patcog.2026.114789}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TFUZZ.2026.3722843" rel="noopener noreferrer" target="_blank">Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection</a>. <strong>Qianzhi Ye</strong>, Hao Huang, Jia Zhang, Hanrui Wu, Ruiting Li, Guoxu Zhou, and Jinyi Long<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>. <strong>IEEE Transactions on Fuzzy Systems</strong>, <span data-i18n="dual_publication_date">published online Aug. 22, 2026</span><span data-i18n="period">.</span> <div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2025">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.bioxbio.com/journal/IEEE-T-FUZZY-SYST" rel="noopener noreferrer" target="_blank">IF 10.2 · 2025</a><a class="paper-tag metric" data-i18n="code" href="https://github.com/JNU-IHCILab/DuetFS" rel="noopener noreferrer" target="_blank">Code</a><button aria-controls="bibtex-duetfs" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2025): https://liyihui6.github.io/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-duetfs"><code>@article{ye2026duetfs,
+  title = {Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection},
+  author = {Ye, Qianzhi and Huang, Hao and Zhang, Jia and Wu, Hanrui and Li, Ruiting and Zhou, Guoxu and Long, Jinyi},
+  journal = {IEEE Transactions on Fuzzy Systems},
+  year = {2026},
+  doi = {10.1109/TFUZZ.2026.3722843}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2025.3579536" rel="noopener noreferrer" target="_blank">SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement</a>. <strong>Qianzhi Ye</strong>, Jia Zhang, Hanrui Wu, Tianlong Gu, C. L. Philip Chen, and Jinyi Long<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 37(9):5613–5626, 2025. <div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2025">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.bioxbio.com/journal/IEEE-T-KNOWL-DATA-EN" rel="noopener noreferrer" target="_blank">IF 11.6 · 2025</a><a class="paper-tag metric" data-i18n="code" href="https://github.com/JNU-IHCILab/SMLE" rel="noopener noreferrer" target="_blank">Code</a><button aria-controls="bibtex-smle" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2025): https://liyihui6.github.io/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-smle"><code>@article{ye2025smle,
+  title = {SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement},
+  author = {Ye, Qianzhi and Zhang, Jia and Wu, Hanrui and Gu, Tianlong and Chen, C. L. Philip and Long, Jinyi},
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  year = {2025},
+  volume = {37},
+  number = {9},
+  pages = {5613--5626},
+  doi = {10.1109/TKDE.2025.3579536}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1109/TKDE.2024.3405489" rel="noopener noreferrer" target="_blank">Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity</a>. Wenbin Qian<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>, Yihui Li, <strong>Qianzhi Ye<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup></strong>, Shuyin Xia, Jintao Huang, and Weiping Ding. <strong>IEEE Transactions on Knowledge and Data Engineering</strong>, 36(11):5797–5810, 2024. <div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2025">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.bioxbio.com/journal/IEEE-T-KNOWL-DATA-EN" rel="noopener noreferrer" target="_blank">IF 10.4 · 2024</a><a class="paper-tag metric" data-i18n="code" href="https://github.com/jxau-kdd/CPDS" rel="noopener noreferrer" target="_blank">Code</a><button aria-controls="bibtex-cpds" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2025): https://liyihui6.github.io/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-cpds"><code>@article{qian2024cpds,
+  title = {Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity},
+  author = {Qian, Wenbin and Li, Yihui and Ye, Qianzhi and Xia, Shuyin and Huang, Jintao and Ding, Weiping},
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  year = {2024},
+  volume = {36},
+  number = {11},
+  pages = {5797--5810},
+  doi = {10.1109/TKDE.2024.3405489}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.inffus.2023.01.019" rel="noopener noreferrer" target="_blank">Disambiguation-Based Partial Label Feature Selection via Feature Dependency and Label Consistency</a>. Wenbin Qian<sup aria-label="Co-first and corresponding author" class="author-mark" data-i18n-aria-label="cofirst_corresponding">†,*</sup>, Yihui Li<sup aria-label="Co-first author" class="author-mark" data-i18n-aria-label="cofirst_author">†</sup>, <strong>Qianzhi Ye</strong>, Weiping Ding, and Wenhao Shu. <strong>Information Fusion</strong>, 94:152–168, 2023. <div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2025">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.sciencedirect.com/journal/information-fusion" rel="noopener noreferrer" target="_blank">IF 18.6 · 2024</a><a class="paper-tag metric" data-i18n="code" href="https://github.com/jxau-kdd/PFFL" rel="noopener noreferrer" target="_blank">Code</a><button aria-controls="bibtex-pffl" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2025): https://liyihui6.github.io/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-pffl"><code>@article{qian2023pffl,
+  title = {Disambiguation-based partial label feature selection via feature dependency and label consistency},
+  author = {Qian, Wenbin and Li, Yihui and Ye, Qianzhi and Ding, Weiping and Shu, Wenhao},
+  journal = {Information Fusion},
+  year = {2023},
+  volume = {94},
+  pages = {152--168},
+  doi = {10.1016/j.inffus.2023.01.019}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.knosys.2022.109778" rel="noopener noreferrer" target="_blank">Label Distribution Feature Selection with Feature Weights Fusion and Local Label Correlations</a>. Wenbin Qian<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>, <strong>Qianzhi Ye</strong>, Yihui Li, and Shiming Dai. <strong>Knowledge-Based Systems</strong>, 247:109778, 2022.<div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2022">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://www.iit.comillas.edu/publicacion/info_revista/en/783/Knowledge-Based_Systems" rel="noopener noreferrer" target="_blank">IF 8.8 · 2022</a><button aria-controls="bibtex-ldfs" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2022): https://www.fabiao.com.cn/sci/09507051/; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-ldfs"><code>@article{qian2022ldfs,
+  title = {Label Distribution Feature Selection with Feature Weights Fusion and Local Label Correlations},
+  author = {Qian, Wenbin and Ye, Qianzhi and Li, Yihui and Dai, Shiming},
+  journal = {Knowledge-Based Systems},
+  year = {2022},
+  volume = {247},
+  pages = {109778},
+  doi = {10.1016/j.knosys.2022.109778}
+}</code></pre></li>
+          <li><a class="paper-title" href="https://doi.org/10.1016/j.ins.2022.05.094" rel="noopener noreferrer" target="_blank">Relevance-Based Label Distribution Feature Selection via Convex Optimization</a>. Wenbin Qian<sup aria-label="Corresponding author" class="author-mark" data-i18n-aria-label="corresponding_author">*</sup>, <strong>Qianzhi Ye</strong>, Yihui Li, Jintao Huang, and Shiming Dai. <strong>Information Sciences</strong>, 607:322–345, 2022.<div class="paper-tags"><span class="paper-tag cas" data-i18n="cas_zone" title="CAS 2022">CAS Zone 1 TOP</span><a class="paper-tag metric" href="https://portalcientifico.upm.es/cat/ipublic/source/5571" rel="noopener noreferrer" target="_blank">IF 8.1 · 2022</a><button aria-controls="bibtex-rldfs" aria-expanded="false" class="paper-tag metric bibtex-toggle" type="button">BibTeX</button></div><!-- CAS source (2022): https://www.fabiao.com/sci/00200255/106.html; IF label year is the metric year. --><pre class="bibtex-panel" hidden="" id="bibtex-rldfs"><code>@article{qian2022rldfs,
+  title = {Relevance-Based Label Distribution Feature Selection via Convex Optimization},
+  author = {Qian, Wenbin and Ye, Qianzhi and Li, Yihui and Huang, Jintao and Dai, Shiming},
+  journal = {Information Sciences},
+  year = {2022},
+  volume = {607},
+  pages = {322--345},
+  doi = {10.1016/j.ins.2022.05.094}
+}</code></pre></li>
         </ul>
-        <p class="muted publication-note"><sup>*</sup> <span data-i18n="corresponding_author">Corresponding author</span><span data-i18n="period">.</span></p>
         <p class="muted"><span data-i18n="complete_publications">For the complete and most up-to-date publication list, please visit my</span> <a href="https://scholar.google.com/citations?user=qp-T0iUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer" data-i18n="scholar_profile">Google Scholar profile</a><span data-i18n="period">.</span></p>
       </section>
 
@@ -168,6 +234,16 @@
     </article>
   </main>
   <script>
+    // Each publication has its own panel; toggle does not affect other papers.
+    document.querySelectorAll('.bibtex-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        const expanded = button.getAttribute('aria-expanded') !== 'true';
+        button.setAttribute('aria-expanded', String(expanded));
+        panel.hidden = !expanded;
+      });
+    });
+
     const translations = {
       en: {
         page_title: 'Qianzhi Ye | Academic Homepage',
@@ -194,6 +270,10 @@
         period: '.',
         publications_heading: 'Selected Publications',
         code: 'Code',
+        cas_zone: 'CAS Zone 1 TOP',
+        author_legend: '† Co-first authors; * Corresponding authors (including co-corresponding authors). IF tags show the metric year.',
+        cofirst_author: 'Co-first author',
+        cofirst_corresponding: 'Co-first and corresponding author',
         dual_publication_date: 'published online Aug. 22, 2026',
         corresponding_author: 'Corresponding author',
         complete_publications: 'For the complete and most up-to-date publication list, please visit my',
@@ -229,6 +309,10 @@
         period: '。',
         publications_heading: '代表性论文',
         code: '代码',
+        cas_zone: '中科院一区TOP',
+        author_legend: '† 共同第一作者；* 通讯作者（含共同通讯作者）。IF 标签标注指标年份。',
+        cofirst_author: '共同第一作者',
+        cofirst_corresponding: '共同第一作者及通讯作者',
         dual_publication_date: '2026年8月22日在线发表',
         corresponding_author: '通讯作者',
         complete_publications: '完整且最新的论文列表请参见我的',
