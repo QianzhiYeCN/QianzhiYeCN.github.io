@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Qianzhi Ye | Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, and feature selection.">
+  <meta name="description" content="Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, feature selection, and fMRI-based semantic decoding for brain-computer interfaces.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23354f67'/%3E%3Cpath d='M10 25 32 15l22 10-22 10zM18 33v11c7 6 21 6 28 0V33' fill='none' stroke='white' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
   <style>
     :root { color-scheme: light; font-family: "Trebuchet MS", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, sans-serif; font-size: 16px; scroll-behavior: smooth; }
@@ -26,8 +26,8 @@
     .language-switch button[aria-pressed="true"] { color: #fff; background: #354f67; box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
     .site-layout { max-width: 1280px; margin: 0 auto; padding: 16px 8px 50px; display: grid; grid-template-columns: 191px minmax(0, 1fr); gap: 38px; align-items: start; }
     .sidebar { position: sticky; top: 20px; padding-top: 20px; }
-    .portrait { width: 175px; height: 175px; aspect-ratio: 1; overflow: hidden; border: 4px solid #fff; box-shadow: 0 0 0 1px #f2f3f3; border-radius: 50%; background: linear-gradient(150deg, #d5f8fc 0%, #c7e8f4 53%, #8dbbd1 100%); display: grid; place-items: center; color: #354f67; font-size: 3.2rem; letter-spacing: -.12em; font-weight: 700; user-select: none; }
-    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; transform: scale(1.16); transform-origin: 50% 38%; display: block; }
+    .portrait { width: 175px; height: auto; aspect-ratio: 5 / 7; overflow: hidden; border: 4px solid #fff; box-shadow: 0 0 0 1px #f2f3f3; border-radius: 12px; background: linear-gradient(150deg, #d5f8fc 0%, #c7e8f4 53%, #8dbbd1 100%); display: grid; place-items: center; color: #354f67; font-size: 3.2rem; letter-spacing: -.12em; font-weight: 700; user-select: none; }
+    .portrait img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 50%; transform: none; display: block; }
     .portrait span { padding-right: .12em; }
     .sidebar h1 { font-size: 1.35rem; line-height: 1.25; margin: 16px 0 18px; }
     .native-name { display: block; margin-top: 4px; color: #70777c; font-size: .92rem; font-weight: 400; }
@@ -36,6 +36,7 @@
     .profile-links li { margin: 0; padding: 0; }
     .profile-links > li > a, .profile-links > li > span { color: #494e52; text-decoration: none; display: flex; gap: 8px; align-items: center; padding: 6px 0; min-height: 34px; }
     .profile-links a:hover { color: #1d3449; text-decoration: underline; }
+    .email-address { min-width: 0; overflow-wrap: anywhere; }
     .profile-links .icon { width: 15px; display: inline-flex; justify-content: center; font-size: .9rem; flex: none; color: #494e52; }
     .content { min-width: 0; padding-top: 6px; }
     .intro { margin: 0 0 19px; }
@@ -86,7 +87,7 @@
       .language-switch button { min-width: 34px; min-height: 26px; padding: 3px 6px; font-size: .75rem; border-radius: 4px; }
       .site-layout { display: block; padding: 20px 22px 44px; }
       .sidebar { position: static; padding: 0 0 22px; border-bottom: 1px solid #f0f1f2; margin-bottom: 20px; display: grid; grid-template-columns: 112px minmax(0, 1fr); column-gap: 20px; align-items: start; }
-      .portrait { width: 112px; height: 112px; font-size: 2.3rem; grid-row: span 3; }
+      .portrait { width: 112px; height: auto; font-size: 2.3rem; grid-row: span 3; }
       .sidebar h1 { margin: 0 0 7px; }
       .role { margin-bottom: 5px; }
       .profile-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; column-gap: 18px; margin-top: 12px; }
@@ -98,7 +99,7 @@
     @media (max-width: 420px) {
       .site-layout { padding-left: 18px; padding-right: 18px; }
       .sidebar { grid-template-columns: 96px minmax(0, 1fr); column-gap: 15px; }
-      .portrait { width: 96px; height: 96px; font-size: 2rem; }
+      .portrait { width: 96px; height: auto; font-size: 2rem; }
       .sidebar h1 { font-size: 1.23rem; }
     }
   </style>
@@ -130,19 +131,20 @@
       <ul class="profile-links">
         <li><span><span class="icon" aria-hidden="true">●</span><span data-i18n="location">Guangzhou, China</span></span></li>
         <li><a href="https://scholar.google.com/citations?user=qp-T0iUAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">▰</span><span data-i18n="google_scholar">Google Scholar</span></a></li>
+        <li><a href="mailto:qianzhiye@stu2023.jnu.edu.cn" aria-label="Email: qianzhiye@stu2023.jnu.edu.cn" data-i18n-aria-label="email_contact"><span class="icon" aria-hidden="true">✉</span><span class="email-address">qianzhiye@stu2023.jnu.edu.cn</span></a></li>
       </ul>
     </aside>
 
     <article class="content">
-      <p class="intro" data-i18n="intro">I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research focuses on multi-label learning, partial-label learning, semi-supervised learning, label enhancement, and feature selection.</p>
+      <p class="intro" data-i18n="intro">I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research interests include multi-label learning, partial-label learning, semi-supervised learning, and feature selection. During my Ph.D. studies, I have also begun exploring brain-computer interfaces, with a focus on fMRI-based semantic decoding.</p>
 
       <section id="news" aria-labelledby="news-heading">
         <h2 id="news-heading" data-i18n="news_heading">News</h2>
         <ul class="body-list">
           <li><em>2026.08</em>: <span data-i18n="news_our_paper">Our paper</span> “Multi-Label Semantic Decoding via Hierarchical Encoding and Sparse Representation Fusion” <span data-i18n="news_published_in">was published in</span> <strong>Pattern Recognition</strong><span data-i18n="period">.</span></li>
-          <li><em>2026.08.22</em>: <span data-i18n="news_our_paper">Our paper</span> “Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection” <span data-i18n="news_published_in">was published in</span> <strong>IEEE Transactions on Fuzzy Systems</strong><span data-i18n="period">.</span></li>
-          <li><em>2025.09</em>: <span data-i18n="news_our_paper">Our paper</span> “SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement” <span data-i18n="news_published_in">was published in</span> <strong>IEEE TKDE</strong><span data-i18n="period">.</span></li>
-          <li><em>2024.11</em>: <span data-i18n="news_our_paper">Our paper</span> “Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity” <span data-i18n="news_published_in">was published in</span> <strong>IEEE TKDE</strong><span data-i18n="period">.</span></li>
+          <li><em>2026.08</em>: <span data-i18n="news_our_paper">Our paper</span> “Dual Fuzzy Modeling for Semi-Supervised Multi-Label Feature Selection” <span data-i18n="news_published_in">was published in</span> <strong>IEEE Transactions on Fuzzy Systems</strong><span data-i18n="period">.</span></li>
+          <li><em>2025.09</em>: <span data-i18n="news_our_paper">Our paper</span> “SMLE: Semi-Supervised Multi-Label Learning with Label Enhancement” <span data-i18n="news_published_in">was published in</span> <strong>IEEE Transactions on Knowledge and Data Engineering</strong><span data-i18n="period">.</span></li>
+          <li><em>2024.11</em>: <span data-i18n="news_our_paper">Our paper</span> “Confidence-Induced Granular Partial Label Feature Selection via Dependency and Similarity” <span data-i18n="news_published_in">was published in</span> <strong>IEEE Transactions on Knowledge and Data Engineering</strong><span data-i18n="period">.</span></li>
         </ul>
       </section>
 
@@ -220,7 +222,11 @@
       <section id="honors" aria-labelledby="honors-heading">
         <h2 id="honors-heading" data-i18n="honors_heading">Honors</h2>
         <ul class="body-list">
-          <li><em>2023</em>: <span data-i18n="national_scholarship">National Scholarship</span><span data-i18n="period">.</span></li>
+          <li><em>2025</em>: <span data-i18n="innovative_talents_program">Outstanding Innovative Talents Cultivation Funded Programs for Graduate Students of Jinan University</span><span data-i18n="period">.</span></li>
+          <li><em>2023</em>: <span data-i18n="outstanding_graduate_student">Outstanding Graduate Student</span><span data-i18n="period">.</span></li>
+          <li><em>2022</em>: <span data-i18n="national_scholarship">National Scholarship for Master’s Students</span><span data-i18n="period">.</span></li>
+          <li><em>2020</em>: <span data-i18n="outstanding_undergraduate_graduate">Outstanding Undergraduate Graduate</span><span data-i18n="period">.</span></li>
+          <li><em>2020</em>: <span data-i18n="outstanding_student">Outstanding Student</span><span data-i18n="period">.</span></li>
         </ul>
       </section>
 
@@ -247,7 +253,7 @@
     const translations = {
       en: {
         page_title: 'Qianzhi Ye | Academic Homepage',
-        meta_description: 'Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, and feature selection.',
+        meta_description: 'Academic homepage of Qianzhi Ye, a Ph.D. student at Jinan University researching multi-label learning, weakly supervised learning, feature selection, and fMRI-based semantic decoding for brain-computer interfaces.',
         main_navigation: 'Main navigation',
         mobile_navigation: 'Mobile navigation',
         language_selector: 'Language selector',
@@ -263,7 +269,8 @@
         university: 'Jinan University',
         location: 'Guangzhou, China',
         google_scholar: 'Google Scholar',
-        intro: 'I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research focuses on multi-label learning, partial-label learning, semi-supervised learning, label enhancement, and feature selection.',
+        email_contact: 'Email: qianzhiye@stu2023.jnu.edu.cn',
+        intro: 'I am a Ph.D. student with the College of Information Science and Technology at Jinan University in Guangzhou, China. I received my M.S. degree from the School of Computer and Information Engineering at Jiangxi Agricultural University in 2023. My research interests include multi-label learning, partial-label learning, semi-supervised learning, and feature selection. During my Ph.D. studies, I have also begun exploring brain-computer interfaces, with a focus on fMRI-based semantic decoding.',
         news_heading: 'News',
         news_our_paper: 'Our paper',
         news_published_in: 'was published in',
@@ -279,14 +286,18 @@
         complete_publications: 'For the complete and most up-to-date publication list, please visit my',
         scholar_profile: 'Google Scholar profile',
         honors_heading: 'Honors',
-        national_scholarship: 'National Scholarship',
+        innovative_talents_program: 'Outstanding Innovative Talents Cultivation Funded Programs for Graduate Students of Jinan University',
+        outstanding_graduate_student: 'Outstanding Graduate Student',
+        national_scholarship: 'National Scholarship for Master’s Students',
+        outstanding_undergraduate_graduate: 'Outstanding Undergraduate Graduate',
+        outstanding_student: 'Outstanding Student',
         education_heading: 'Education',
         education_phd: 'Ph.D. student, College of Information Science and Technology, Jinan University, Guangzhou, China.',
         education_ms: 'M.S., School of Computer and Information Engineering, Jiangxi Agricultural University, Nanchang, China, 2023.'
       },
       zh: {
         page_title: '叶倩芝 | 个人学术主页',
-        meta_description: '叶倩芝的个人学术主页，现为暨南大学博士研究生，研究方向包括多标签学习、弱监督学习与特征选择。',
+        meta_description: '叶倩芝的个人学术主页，现为暨南大学博士研究生，研究方向包括多标签学习、弱监督学习、特征选择，以及脑机接口方向中基于fMRI的语义解码。',
         main_navigation: '主导航',
         mobile_navigation: '移动端导航',
         language_selector: '语言选择',
@@ -302,7 +313,8 @@
         university: '暨南大学',
         location: '中国广州',
         google_scholar: '谷歌学术',
-        intro: '我现为暨南大学信息科学技术学院博士研究生，位于中国广州。我于2023年毕业于江西农业大学计算机与信息工程学院，获硕士学位。我的研究方向包括多标签学习、偏标记学习、半监督学习、标签增强和特征选择。',
+        email_contact: '邮箱：qianzhiye@stu2023.jnu.edu.cn',
+        intro: '我现为暨南大学信息科学技术学院博士研究生，位于中国广州。我于2023年毕业于江西农业大学计算机与信息工程学院，获硕士学位。我的研究方向包括多标签学习、偏标记学习、半监督学习和特征选择。博士期间，我也开始涉猎脑机接口方向，具体开展基于功能磁共振成像（fMRI）的语义解码研究。',
         news_heading: '最新动态',
         news_our_paper: '我们的论文',
         news_published_in: '发表于',
@@ -318,7 +330,11 @@
         complete_publications: '完整且最新的论文列表请参见我的',
         scholar_profile: '谷歌学术主页',
         honors_heading: '荣誉',
-        national_scholarship: '国家奖学金',
+        innovative_talents_program: '获批暨南大学研究生拔尖创新人才培养项目（人工智能专项）',
+        outstanding_graduate_student: '优秀研究生',
+        national_scholarship: '硕士研究生国家奖学金',
+        outstanding_undergraduate_graduate: '优秀本科毕业生',
+        outstanding_student: '优秀学生',
         education_heading: '教育经历',
         education_phd: '博士研究生，暨南大学信息科学技术学院，中国广州。',
         education_ms: '硕士，江西农业大学计算机与信息工程学院，中国南昌，2023年。'
